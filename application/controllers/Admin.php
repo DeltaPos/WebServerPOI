@@ -12,7 +12,7 @@ class Admin extends CI_Controller {
             $data['contenido'] = "Admin/index";
             $data['username']= $this->session->userdata('username');
             $data['cod_Usuarios']= $this->session->userdata('cod_Usuarios');
-            $this->load->view("welcome_message", $data);
+            $this->load->view("vista_General", $data);
         } else {
             redirect(base_url(''));
         }

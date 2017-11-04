@@ -47,12 +47,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="<?php echo base_url(); ?>assets/pages/css/login-5.min.css" rel="stylesheet" type="text/css" />
 
         <!-- END HEAD -->
+        <style type="text/css">
+            @media (min-width: 1200px){
+                .container2 {
+                    width: 1270px;
 
+                }
+                .container2{
+                    padding-left: 54px;
+                }
+            }
+
+        </style>
     <body class="login">
         <!-- BEGIN : LOGIN PAGE 5-2 -->
-        <?php
-        $this->load->view($contenido);
-        ?>
+<?php
+                    $this->load->view($contenido);
+                    ?>
 
 
         <!-- END QUICK NAV -->
