@@ -31,12 +31,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <link href="<?php echo base_url(); ?>assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css">
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="<?php echo base_url(); ?>assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/global/css/components.min.css" rel="stylesheet"  type="text/css" />
 
         <link href="<?php echo base_url(); ?>assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
+        <link href="<?php echo base_url(); ?>assets/pages/css/profile.min.css" rel="stylesheet" type="text/css">
         <!-- BEGIN THEME LAYOUT STYLES -->
         <link href="<?php echo base_url(); ?>assets/layouts/layout3/css/layout.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
@@ -211,7 +213,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-default">
                                                 <li>
-                                                    <a href="#">
+                                                    <a href="<?php echo base_url(); ?>User/">
                                                         <i class="icon-user"></i> My Profile </a>
                                                 </li>
                                                 <li>
@@ -272,13 +274,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div class="hor-menu  ">
                                     <ul class="nav navbar-nav">
                                         <li aria-haspopup="true" class="menu-dropdown classic-menu-dropdown active">
-                                            <a href="javascript:;"> Principal
+                                            <a href="<?php echo base_url(); ?>Home"> Principal
                                                 <span class="arrow"></span>
                                             </a>
                                         </li>
                                         <li aria-haspopup="true" class="menu-dropdown mega-menu-dropdown  ">
                                             <a href="javascript:;"> 
-                                                <span class="arrow">--</span>
+                                                <span class="arrow">Edicion POI</span>
                                             </a>
                                             <ul class="dropdown-menu" style="min-width: 26px">
                                                 <li>
@@ -287,7 +289,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                             <div class="col-md-12">
                                                                 <ul class="mega-menu-submenu">
                                                                     <li>
-                                                                        <a href="#">--</a>
+                                                                        <a href="<?php echo base_url(); ?>Edicion">Imagenes</a>
                                                                     </li>
                                                                     <li>
                                                                         <a href="#">--</a>
@@ -417,6 +419,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?php echo base_url(); ?>assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
         <script src="<?php echo base_url(); ?>assets/global/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
+        <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
 
         <script src="<?php echo base_url(); ?>assets/global/plugins/moment.min.js" type="text/javascript"></script>
         <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js" type="text/javascript"></script>
@@ -451,7 +454,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?php echo base_url(); ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
         <script src="<?php echo base_url(); ?>assets/pages/scripts/login-5.js" type="text/javascript"></script>
-
+       
         <script>
             $(document).ready(function ()
             {
@@ -460,6 +463,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     $('#radio1003').attr('checked', 'checked');
                 });
             })
+            // In your Javascript (external .js resource or <script> tag)
+            $(document).ready(function () {
+                $('.js-example-basic-single').select2();
+            });
         </script>
     </body>
 

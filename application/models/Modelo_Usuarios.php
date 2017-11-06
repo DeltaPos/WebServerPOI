@@ -22,4 +22,16 @@ class Modelo_Usuarios extends CI_Model {
         }
     }
 
+    public function setDatosUser($Cod_Usuario) {
+        $this->db->where('cod_Usuarios', $Cod_Usuario);
+        $query = $this->db->get('usuarios');
+        //echo $this->db->last_query();
+        if ($query->num_rows() == 1) {
+            return $query->result();
+        } else {
+            $this->session->set_flashdata('usuario_incorrecto', 'Los datos introducidos son incorrectos');
+            redirect(base_url() . 'login', 'refresh');
+        }
+    }
+
 }

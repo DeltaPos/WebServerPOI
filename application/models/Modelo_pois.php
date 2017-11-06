@@ -15,6 +15,7 @@ class Modelo_pois extends CI_Model {
         $query = $this->db->query("SELECT * FROM pois");
         return $query->result();
     }
+    
 
 }
 ?> 

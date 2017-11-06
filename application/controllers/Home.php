@@ -1,6 +1,6 @@
 <?php
 
-class Admin extends CI_Controller {
+class Home extends CI_Controller {
 
     function __construct() {
         parent::__construct();
@@ -8,8 +8,8 @@ class Admin extends CI_Controller {
     }
 
     function index() {
-        if ($this->session->userdata('perfil') != FALSE && $this->session->userdata('perfil') == 'Admin') {
-            $data['contenido'] = "Admin/index";
+        if ($this->session->userdata('perfil') != FALSE ) {
+            $data['contenido'] = "Home/index";
             $data['username']= $this->session->userdata('username');
             $data['cod_Usuarios']= $this->session->userdata('cod_Usuarios');
             $this->load->view("vista_General", $data);

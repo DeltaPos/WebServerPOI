@@ -98,8 +98,8 @@ var Login = function () {
             success: function (data, textStatus, jqXHR) {
                 var content = JSON.parse(data);
                 //console.log(content);
-                //alert(content.perfil);
-                location.href = window.location.pathname + "" + content.perfil + "/";
+                alert(window.location.pathname + "home/");
+             location.href = window.location.pathname + "home/";
 
 
 

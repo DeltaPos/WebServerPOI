@@ -211,7 +211,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-default">
                                                 <li>
-                                                    <a href="#">
+                                                    <a href="<?php echo base_url();?>/User/">
                                                         <i class="icon-user"></i> My Profile </a>
                                                 </li>
                                                 <li>
