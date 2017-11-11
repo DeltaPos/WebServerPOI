@@ -223,7 +223,7 @@
 <script type="text/javascript">
     function poi_llamada(id) {
         var cedula = $("#cedula_Estudiante_Pensiones").val();
-        var url = "<?php echo base_url('Poi_Map/idpoi/id/'); ?>" + id;
+        var url = "<?php echo base_url('POI_Map/idpoi/id/'); ?>" + id;
         var urlImg = "<?php echo base_url(); ?>";
 
         $.ajax({

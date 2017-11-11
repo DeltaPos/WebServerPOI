@@ -383,7 +383,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         });
                                                         $("#btn_grabar").on("click", function () {
 
-                                                            var url = "<?php echo base_url(); ?>Poi_Map";
+                                                            var url = "<?php echo base_url(); ?>POI_Map";
 
                                                             //INSTANCIAR EL FORMULARIO
                                                             var f = $("#formulario");
@@ -468,7 +468,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         });
                                                         //BORRAR
                                                         $("#btn_borrar").on("click", function () {
-                                                            var url = "<?php echo base_url(); ?>Poi_Map/Delete";
+                                                            var url = "<?php echo base_url(); ?>POI_Map/Delete";
                                                             var f_eliminar = $("#formulario_eliminar");
                                                             // alert(url)
                                                             $.ajax({
@@ -498,7 +498,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         });
                                                         //ACTUALIZAR
                                                         $("#btn_actualizar").on("click", function () {
-                                                            var url = "<?php echo base_url(); ?>Poi_Map/Update";
+                                                            var url = "<?php echo base_url(); ?>POI_Map/Update";
 
                                                             var f_eliminar = $("#formulario_eliminar");
                                                             $.ajax({
@@ -577,7 +577,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         //SE DEBEN QUITAR LOS ANTERIORES DEL MAPA
                                                         limpiar_marcadores(marcadores_bd);
                                                         var f_eliminar = $("#formulario_eliminar");
-                                                        var url = "<?php echo base_url(); ?>Poi_Map";
+                                                        var url = "<?php echo base_url(); ?>POI_Map";
                                                         // alert(url);
                                                         $.ajax({
                                                             type: "GET",
