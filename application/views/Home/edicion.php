@@ -81,7 +81,7 @@
                                                         <option>--</option>
                                                         <?php foreach ($puntos as $key => $value) {
                                                             ?>
-                                                            <option value="<?php echo $value->id; ?>"><?php echo $value->name; ?></option>
+                                                            <option value="<?php echo $value->id; ?>"><?php echo $value->name_pois; ?></option>
                                                         <?php } ?>
 
                                                     </select>
@@ -98,7 +98,7 @@
                                                         <span class="input-group-addon">
                                                             <i class="fa fa-envelope"></i>
                                                         </span>
-                                                        <input type="text" class="form-control" placeholder="Dirección" name="direccion"> </div>
+                                                        <input type="text" class="form-control" placeholder="Dirección" name="direccion" id="direccion" value=""> </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Telefonos</label>
@@ -106,7 +106,7 @@
                                                         <span class="input-group-addon">
                                                             <i class="fa fa-envelope"></i>
                                                         </span>
-                                                        <input type="text" class="form-control" placeholder="Teléfono" name="telefono"> </div>
+                                                        <input type="text" class="form-control" placeholder="Teléfono" name="telefono" id="telefono"> </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Descripción</label>
@@ -114,10 +114,10 @@
                                                         <span class="input-group-addon">
                                                             <i class="fa fa-envelope"></i>
                                                         </span>
-                                                        <textarea  class="form-control" placeholder="Descripción" style="height: 65px;" name="descripcion"></textarea>
+                                                        <textarea  class="form-control" placeholder="Descripción" style="height: 65px;" name="descripcion" id="descripcion"></textarea>
                                                     </div>
                                                 </div>
-                                                                                      
+
                                                 <div class="form-group">
                                                     <label class="">Imagen</label>
                                                     <div class="">
@@ -141,13 +141,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>Objetivos</label>
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                            <i class="fa fa-envelope"></i>
-                                                        </span>
-                                                        <textarea  class="form-control" placeholder="Objetivos" name="objetivos"></textarea>
 
-                                                    </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>‎Misión</label>
@@ -155,7 +149,7 @@
                                                         <span class="input-group-addon">
                                                             <i class="fa fa-envelope"></i>
                                                         </span>
-                                                        <textarea class="form-control" placeholder="Misión" name="mision"></textarea>
+                                                        <textarea class="form-control" placeholder="Misión" name="mision" id="mision"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -164,19 +158,20 @@
                                                         <span class="input-group-addon">
                                                             <i class="fa fa-envelope"></i>
                                                         </span>
-                                                        <textarea class="form-control" placeholder="Visión" name="vision"></textarea>
+                                                        <textarea class="form-control" placeholder="Visión" name="vision" id="vision"></textarea>
 
                                                     </div>
                                                 </div>
-          
-                                                <div class="col-md-12">
+
+                                                
+                                            </div>
+                                            <div class="col-md-12">
                                                     <div class="form-actions">
                                                         <button type="submit" class="btn blue">Submit</button>
                                                         <button type="button" class="btn default">Cancel</button>
                                                     </div>
 
                                                 </div>
-                                            </div>
                                             <?= form_close() ?>
 
 
@@ -243,6 +238,16 @@
                     //alert(item.id);
                     html += '<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px; line-height: 150px;"><img src="' + urlImg + 'assets/img/User/' + item.imagen + '"></div>';
 
+
+
+                });
+                $.each(data.infopois, function (i, item) {
+                    $("#direccion").val(item.dirreccion_pois);
+                    $("#telefono").val(item.telefono_pois);
+                    $("#descripcion").val(item.description_pois);
+                    $("#mision").val(item.Mision_pois);
+                    $("#vision").val(item.vision_pois);
+                    
 
                 });
                 $("#imagenes").html(html);

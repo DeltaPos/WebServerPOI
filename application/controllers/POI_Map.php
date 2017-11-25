@@ -71,15 +71,25 @@ class POI_Map extends REST_Controller {
     }
 
     function idpoi_get() {
-        $id=$this->get('id');
-        $data['infopois']=$this->Modelo_pois_map->IdPOIs($id);
-        $data['imgPos']=$this->Modelo_pois_map->IdPOIsImage($id);
-        
+        $id = $this->get('id');
+        $data['infopois'] = $this->Modelo_pois_map->IdPOIs($id);
+        $data['imgPos'] = $this->Modelo_pois_map->IdPOIsImage($id);
+
         $this->response($data);
     }
+
     function data_get() {
-        $data=$this->Modelo_pois_map->Ejemplo();
+        $data = $this->Modelo_pois_map->Ejemplo();
         $this->response($data);
+    }
+
+    function buscar_post() {
+        //print_r($_POST);
+        
+        $data = $this->Modelo_pois_map->buscar($_POST["palabra_buscar"]);
+        $r["estado"] = "ok";
+        $r["mensaje"] = $data;
+        $this->response($r);
     }
 
 }

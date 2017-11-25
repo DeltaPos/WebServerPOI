@@ -12,7 +12,7 @@ class Home extends CI_Controller {
             $data['contenido'] = "Home/index";
             $data['username']= $this->session->userdata('username');
             $data['cod_Usuarios']= $this->session->userdata('cod_Usuarios');
-            $this->load->view("vista_General", $data);
+            $this->load->view("Vista_General", $data);
         } else {
             redirect(base_url(''));
         }
